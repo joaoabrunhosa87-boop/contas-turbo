@@ -1,0 +1,11 @@
+{
+  "name": "contas-turbo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "PWA de treino de cálculo matemático",
+  "scripts": {
+    "test": "node tests/run-node.js",
+    "start": "node serve.js"
+  }
+}

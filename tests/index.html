@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Testes do motor</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #0d0e1f; color: #f4f5ff; padding: 16px; }
+    pre { white-space: pre-wrap; background: #1b1d3d; padding: 12px; border-radius: 12px; }
+    .ok { color: #22c55e; } .bad { color: #ff4757; }
+    a { color: #22d3ee; }
+  </style>
+</head>
+<body>
+  <h1>Testes do motor matemático</h1>
+  <p><a href="../index.html">← Voltar à app</a></p>
+  <pre id="out">A correr…</pre>
+  <script type="module">
+    import { runTests } from './math.test.js';
+    const out = document.getElementById('out');
+    const lines = [];
+    const { pass, fail } = runTests((l) => lines.push(l));
+    out.textContent = lines.join('\n');
+    out.className = fail ? 'bad' : 'ok';
+  </script>
+</body>
+</html>
